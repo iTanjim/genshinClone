@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+header .tit {
+  color: aliceblue;
+  text-shadow: -1px 7px 6px rgba(95, 250, 255, 0.38);
+  font-size: 8.5em;
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+}
+.home-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3rem 10rem 0;
+  padding: 0.5rem 2.5rem;
+  border-radius: 10px;
+  color: aliceblue;
+  text-shadow: -1px 7px 6px rgba(95, 250, 255, 0.38);
+  font-size: 1.5rem;
+  z-index: 10;
+}
+.home-btn:hover {
+  background-color: aliceblue;
+  color: black;
+}
+section.home-para {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.home-para img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.char-cards {
+  background: hsla(217, 70%, 26%, 1);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.char-cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, #094b65, transparent);
+  z-index: 10;
+}
+
+.card-cont {
+  padding: 7rem 0 0;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.card-cover {
+  perspective: 130rem;
+  color: white;
+}
+.card {
+  position: relative;
+  height: 23rem;
+  width: 15rem;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* .card-cover:hover .card {
+  transform: rotateY(180deg);
+} */
+.card-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    rgb(143, 109, 36) 0,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    rgb(143, 109, 36) 100%
+  );
+  border-image-slice: 44;
+  border-radius: 7px;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.card-face h3 {
+  text-align: center;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 80px;
+  height: 35px;
+  letter-spacing: 2px;
+  top: 20px;
+  /* overflow: hidden; */
+}
+
+.card-face h3 span:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, aqua);
+  animation: glowright 2s linear infinite;
+}
+.card-face h3 span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, aqua);
+  animation: glowleft 2s linear infinite;
+}
+@keyframes glowleft {
+  0% {
+    transform: translateX(100%);
+  }
+  99% {
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes glowright {
+  0% {
+    transform: translateX(-100%);
+  }
+  99% {
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.card-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* transform: scale(1.2); */
+}
+.card-face.back {
+  background-color: rgb(0, 0, 0);
+}
+
+.card .card-face:nth-child(2) {
+  transform: rotateY(180deg);
+}
+
+/*old
+*/
+/* .card-container {
+  display: inline-block;
+  width: 15rem;
+  height: 20rem;
+  perspective: 150rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: all 0.8s ease;
+}
+.card-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 275px;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: aqua;
+}
+.back {
+  background: blue;
+  transform: rotateY(180deg);
+} */

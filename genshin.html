@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="genshin-style.css" />
+    <title>Genshin Impact</title>
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <img id = "music-icon" src="music-on.png" / alt = "music-icon">
+        <h1><img src="logo.png" alt="" /></h1>
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="#" id="home">Home</a></li>
+          <li><a href="#" id="news">News</a></li>
+          <li><a href="char-page.html" id="characters">Characters</a></li>
+          <li><a href="#" id="explore">Explore</a></li>
+          <li><a href="#" id="more">More</a></li>
+          <div class="top-line"></div>
+        </ul>
+      </nav>
+      <div class="dl-login">
+        <button class="login">
+          <span>Login</span>
+          <img src="login-icon.png" alt="pfp" />
+        </button>
+        <a href="#" class="download">Download</a>
+      </div>
+    </header>
+    <section class="hook-cont">
+      <video class="bg-video" autoplay muted loop>
+        <source src="bg-video.mp4" type="video/mp4" />
+      </video>
+      <div class="poster">
+        <div class="troll-cont">
+          <a
+            href="https://www.youtube.com/watch?v=o1EEvbQXe6Y&ab_channel=GenshinImpact"
+            target="_blank"
+            class="vid-button"
+          ></a>
+        </div>
+        <div class="poster-text">
+          <p>Genshin Impact - Download Now!</p>
+        </div>
+        <div class="download-platforms">
+          <div class="qr-code">
+            <img src="qr-code.png" alt="" />
+          </div>
+          <div class="center-platform">
+            <div class="first-col">
+              <a class="btn1" href="#"><img src="ps5-btn.png" alt="" /></a>
+              <a class="btn1" href="#"><img src="windows-btn.png" /></a>
+              <a></a>
+            </div>
+            <div class="second-col">
+              <a class="btn1" href="#"><img src="google-btn.png" alt="" /></a>
+              <a class="btn1" href="#"><img src="apple-btn.png" /></a>
+              <a></a>
+            </div>
+          </div>
+          <img class="trade-mark" src = "tm-btn.png"></img>
+        </div>
+      </div>
+    </section>
+    <section class="slider-cont">
+      <div class="slider-bg">
+        <img src="inn.jpg" />
+      </div>
+      <div class="slider">
+        <div class="images">
+          <img id="img-1" src="xiao-news.jpg" alt="Image 1" />
+          <img id="img-2" src="zhon-news.jpg" alt="Image 2" />
+          <img id="img-3" src="raiden-news.jpg" alt="Image 3" />
+          <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+          </div>
+        </div>
+        <div class="texts">
+          <ol class="news-text">
+            <li>Latest</li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                doloribus ut amet, culpa id iste laborum, exercitationem odio
+                laudantium ipsum magnam unde quos impedit dignissimos tenetur
+                provident non, suscipit reprehenderit.
+              </p>
+              <p>Nov 10, 2023</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                doloribus ut amet, culpa id iste laborum, exercitationem odio
+                laudantium ipsum magnam unde quos impedit dignissimos tenetur
+                provident non, suscipit reprehenderit.
+              </p>
+              <p>Nov 10, 2023</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                doloribus ut amet, culpa id iste laborum, exercitationem odio
+                laudantium ipsum magnam unde quos impedit dignissimos tenetur
+                provident non, suscipit reprehenderit.
+              </p>
+              <p>Nov 10, 2023</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                doloribus ut amet, culpa id iste laborum, exercitationem odio
+                laudantium ipsum magnam unde quos impedit dignissimos tenetur
+                provident non, suscipit reprehenderit.
+              </p>
+              <p>Nov 10, 2023</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                doloribus ut amet, culpa id iste laborum, exercitationem odio
+                laudantium ipsum magnam unde quos impedit dignissimos tenetur
+                provident non, suscipit reprehenderit.
+              </p>
+              <p>Nov 10, 2023</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="regions">
+      <ul class="grid">
+        <li>
+          <div class="loc-name">
+            <p>Monstadt</p>
+          </div>
+          <img class="location" src="monstat.jpg" alt="" /><img
+            class="mon-char"
+            src="jean.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <div class="loc-name">
+            <p>Liyue</p>
+          </div>
+          <img class="location" src="liyue.jpg" alt="" />
+          <img class="mon-char" src="xiao.png" alt="" />
+        </li>
+        <li>
+          <div class="loc-name">
+            <p>Inzezuma</p>
+          </div>
+          <img class="location" src="inazuma.jpg" alt="" />
+          <img class="mon-char" src="ayaka.png" alt="" />
+        </li>
+        <li>
+          <div class="loc-name">
+            <p>Sumeru</p>
+          </div>
+          <img class="location" src="sumeru.jpg" alt="" />
+          <img class="mon-char" src="tignari.png" alt="" />
+        </li>
+        <li>
+          <div class="loc-name">
+            <p>Fontaine</p>
+          </div>
+          <img class="location" src="fontaine.png" alt="" />
+          <img class="mon-char" src="lilinet.png" alt="" />
+        </li>
+      </ul>
+    </section>
+    <audio id="bg-song"><source src="genshin-ost.mp3" type = audio/mp3></audio>
+
+    <script>
+      const song = document.getElementById("bg-song");
+      const icon = document.getElementById("music-icon");
+
+      const homeEl = document.getElementById("home");
+      const newsEl = document.getElementById("news");
+      const charEL = document.getElementById("characters");
+      const expEl = document.getElementById("explore");
+      const moreEl = document.getElementById("more");
+
+      const topLine = document.querySelector(".top-line");
+
+      icon.onclick = function () {
+        if (song.paused) {
+          song.play();
+          icon.src = "music-off.png";
+        } else {
+          song.pause();
+          icon.src = "music-on.png";
+        }
+      };
+      function getPos(id) {
+        let pos = document.getElementById(id);
+        return pos.offsetLeft.toString();
+      }
+      function getWidth(id) {
+        let width = document.getElementById(id);
+        return width.offsetWidth.toString();
+      }
+      homeEl.addEventListener("mouseover", function () {
+        topLine.style.left = getPos("home") + "px";
+        topLine.style.width = getWidth("home") + "px";
+      });
+      newsEl.addEventListener("mouseover", function () {
+        topLine.style.left = getPos("news") + "px";
+        topLine.style.width = getWidth("news") + "px";
+      });
+      charEL.addEventListener("mouseover", function () {
+        topLine.style.left = getPos("characters") + "px";
+        topLine.style.width = getWidth("characters") + "px";
+      });
+      moreEl.addEventListener("mouseover", function () {
+        topLine.style.left = getPos("more") + "px";
+        topLine.style.width = getWidth("more") + "px";
+      });
+      expEl.addEventListener("mouseover", function () {
+        topLine.style.left = getPos("explore") + "px";
+        topLine.style.width = getWidth("explore") + "px";
+      });
+
+      // slider
+
+      var imgs = document.querySelectorAll(".slider img");
+      var dots = document.querySelectorAll(".dot");
+      var currentImg = 0; // index of the first image
+      const interval = 3000;
+
+      function changeSlide(n) {
+        for (let i = 0; i < imgs.length; i++) {
+          // reset
+          imgs[i].style.opacity = 0;
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        currentImg = n;
+
+        imgs[currentImg].style.opacity = 1;
+        dots[currentImg].className.toggle(" active");
+      }
+    </script>
+  </body>
+</html>
